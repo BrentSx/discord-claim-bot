@@ -15,7 +15,7 @@ const {
 const { DISCORD_TOKEN, CLIENT_ID, GUILD_ID, CLAIM_CHANNEL_ID, STAFF_ROLE_ID } = process.env;
 for (const [key, value] of Object.entries({ DISCORD_TOKEN, CLIENT_ID, GUILD_ID, CLAIM_CHANNEL_ID, STAFF_ROLE_ID })) {
   if (!value) {
-    console.error(`Missing ${key} in .env`);
+    console.error(`Missing ${key} — set it in .env locally, or in the service's Variables tab on Railway`);
     process.exit(1);
   }
 }
